@@ -1,0 +1,15 @@
+#!  usr/bin/env php 
+
+<?php
+use Symfony\Component\Console\Application;
+use Tasks/ShowCommand;
+require 'vendor/autoload.php'
+
+
+$app = new Application('Tasks','1.0');
+
+$app->add(ShowCommand);
+
+
+$app->run()
+
