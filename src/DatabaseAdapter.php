@@ -19,6 +19,6 @@ class DatabaseAdapter
 
     public function query($query, $parameters)
     {
-        return $this->connection->prepare($sql)->execute($parameters);
+        return $this->connection->prepare($query)->execute($parameters);
     }
 }
