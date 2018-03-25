@@ -14,7 +14,7 @@ class DatabaseAdapter
 
     public function fetchAll($tableName)
     {
-        return $this->connection->query("select * from {$tableName->fetchAll()}");
+        return $this->connection->query('select * from ' . $tableName)->fetchAll();
     }
 
     public function query($query, $parameters)
