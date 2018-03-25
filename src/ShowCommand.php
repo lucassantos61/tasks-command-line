@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 
-class ShowCommand extends Command
+class ShowCommand  extends Command
 {
     private $database;
     public function __construct(DatabaseAdapter $database)
@@ -33,7 +33,7 @@ class ShowCommand extends Command
         $table = new Table($output);
 
         $table->setHeaders([['Id','Description']])
-              ->showRows($tasks)
+              ->setRows($tasks)
               ->render();
 
     }
